@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <Version>0.0.1-alpha</Version>
+    <Authors>David Orbelian</Authors>
+    <Company>David Orbelian</Company>
+    <Product>MicroNetCore</Product>
+    <Description>Part of MicroNetCore framework for developing a Business service.</Description>
+    <Copyright>Copyright (c) 2017 David Orbelian</Copyright>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/davidorbelian/MicroNetCore/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/davidorbelian/MicroNetCore</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/davidorbelian/MicroNetCore</RepositoryUrl>
+    <PackageTags>Microservice Business MicroNetCore</PackageTags>
+    <PackageReleaseNotes>First release.</PackageReleaseNotes>
+  </PropertyGroup>
+
+</Project>
