@@ -15,4 +15,8 @@
     <PackageReleaseNotes>First release.</PackageReleaseNotes>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MicroNetCore\MicroNetCore.csproj" />
+  </ItemGroup>
+
 </Project>
