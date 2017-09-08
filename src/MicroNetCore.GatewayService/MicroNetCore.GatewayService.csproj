@@ -16,7 +16,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MicroNetCore.AspNetCore.Proxy" Version="0.0.1-alpha" />
+    <PackageReference Include="MicroNetCore.AspNetCore.Proxy" Version="0.0.3-alpha" />
   </ItemGroup>
 
   <ItemGroup>

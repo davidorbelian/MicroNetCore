@@ -1,20 +1,25 @@
 ﻿using MicroNetCore.AspNetCore.Proxy.Extensions;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace MicroNetCore.GatewayService
 {
-    public abstract class GatewayStartup : Startup
+    public sealed class GatewayStartup : Startup
     {
-        protected GatewayStartup(IConfiguration configuration)
+        public GatewayStartup(IConfiguration configuration)
             : base(configuration)
         {
         }
 
-        protected override IServiceCollection GetServices()
+        protected override void Add(IServiceCollection services)
         {
-            return new ServiceCollection()
-                .AddProxy(Configuration);
+            services.AddProxy(Configuration);
+        }
+
+        protected override void Use(IApplicationBuilder app)
+        {
+            app.UseProxy();
         }
     }
 }

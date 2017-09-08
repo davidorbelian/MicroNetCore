@@ -17,9 +17,12 @@ namespace MicroNetCore
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .ConfigureAppConfiguration((hostingContext, config) =>
                 {
-                    config.AddSettingsFolder(Directory.GetCurrentDirectory());
-
                     var hostingEnvironment = hostingContext.HostingEnvironment;
+
+                    config
+                        .AddSettingsFolder()
+                        .AddJsonFile("appsettings.json", true, true)
+                        .AddJsonFile($"appsettings.{hostingEnvironment.EnvironmentName}.json", true, true);
 
                     if (hostingEnvironment.IsDevelopment())
                     {

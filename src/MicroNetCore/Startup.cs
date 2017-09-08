@@ -1,3 +1,4 @@
+using System;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -15,12 +16,14 @@ namespace MicroNetCore
             Configuration = configuration;
         }
 
-        protected abstract IServiceCollection GetServices();
+        protected abstract void Add(IServiceCollection services);
+        protected abstract void Use(IApplicationBuilder app);
 
-        public void ConfigureServices(IServiceCollection services)
+        public IServiceProvider ConfigureServices(IServiceCollection services)
         {
-            foreach (var service in GetServices())
-                services.Add(service);
+            Add(services);
+
+            return services.BuildServiceProvider();
         }
 
         public void Configure(
@@ -28,6 +31,7 @@ namespace MicroNetCore
             IHostingEnvironment env,
             ILoggerFactory loggerFactory)
         {
+            Use(app);
         }
     }
 }
