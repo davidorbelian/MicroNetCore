@@ -9,6 +9,8 @@ A framework over AspNetCore for developing microservice-based solutions.
 Gateway service is a proxy application for redirecting incoming requests to the appropriate business services.
 
 #### Install
+[![NuGet Pre Release](https://img.shields.io/nuget/vpre/MicroNetCore.GatewayService.svg?style=flat-square)]()
+
 Package Manager
 ```
 PM> Install-Package MicroNetCore.GatewayService -Version 0.0.1-alpha
