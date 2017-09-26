@@ -2,6 +2,7 @@
 
 ## Overview
 A framework over AspNetCore for developing microservice-based solutions.
+![alt text](https://raw.githubusercontent.com/davidorbelian/MicroNetCore/master/MicroNetCore.png)
 
 ## Structure
 
